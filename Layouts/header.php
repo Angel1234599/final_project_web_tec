@@ -28,7 +28,10 @@
         <li class="nav-item active">
           <a class="nav-link" href="#">Acept Adoption</a>
         </li>
-        
+        <li class="nav-item active">
+          <a class="nav-link" href="login.php">Login</a>
+        </li>
+          
       </ul>    
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown ml-auto">
