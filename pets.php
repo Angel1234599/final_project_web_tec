@@ -35,6 +35,12 @@
 			//Containt main PHP Form
 			
 		?>
+		<!--Image file -->
+		<img src="img/pet1img.jpg" alt="petimage1" width="320" height="240">
+        <img src="img/pet2img.jpg" alt="petimage2" width="320" height="240">
+
+
+		
 		</div>
 	</main>
 
@@ -45,3 +51,4 @@
 	</footer>
 </body>
 </html>
+

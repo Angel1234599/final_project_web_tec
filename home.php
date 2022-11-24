@@ -35,6 +35,12 @@
 			//Containt main PHP Form
 			
 		?>
+		<!--Image file -->
+		
+		<img src="img/adoptme.png" alt="petimage" width="320" height="240">
+
+
+		
 		</div>
 	</main>
 
