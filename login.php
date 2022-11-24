@@ -1,15 +1,34 @@
-    <?php
+<?php
+    session_start();    
+    $errorM = "";
+    
+    include('dbconnection.php');
 
+    if(isset($_POST['submit'])){
 
-if(isset($_POST['submit'])){
-        echo "hello";
+        $email = $_POST['idemail'];
+        $password = $_POST['idpass'];
 
-        
+        $query = "select * from user where email = '$email' and password = '$password'";
 
-}
+        echo $query;
 
+        $result = $db->query($query);
 
+        $row = $result->fetch_assoc();
+
+        if($row){
+            echo "welcome " . $row['idemail'];
+            $_SESSION['isLoggedIn'] = true;
+            $_SESSION['user'] = $row;
+            header("Location:  Index.php");
+
+        }else{
+            $errorM = "The username/password is incorrect";
+        }
+    }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -51,6 +70,11 @@ if(isset($_POST['submit'])){
 			//Containt main PHP Form
 		?>
 
+    <?php 
+    if(!isset($_SESSION['isLoggedIn']) || $_SESSION['isLoggedIn'] == false){
+      ?>
+  <div class = "error"><?php echo $errorM; ?></div>
+
 <section class="h-100 gradient-form" style="background-color: #eee;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -70,15 +94,15 @@ if(isset($_POST['submit'])){
 
                   <div class="form-outline mb-4">
                     <input type="email" id="idemail" class="form-control"   
-                      placeholder="Enter email address"  />
+                      placeholder="Enter email address"  name="idemail"  />
                     <label class="form-label" for="idemail">Email</label>
                   </div>
 
                   <div class="form-outline mb-4">
                     <input type="password" id="idpass" class="form-control"
-                    placeholder="Enter Password"  />
+                    placeholder="Enter Password" name="idpass"/>
                     <label class="form-label" for="idpass">Password</label>
-                </div>
+             </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
                     <input type = "submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Log In">
@@ -89,7 +113,7 @@ if(isset($_POST['submit'])){
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Don't have an account?</p>
-                    <button type="button" class="btn btn-outline-danger">Create new</button>
+                    <button type="button" class="btn btn-outline-danger"><a href="registration.php">Create new</a></button>
                   </div>
 
                 </form>
@@ -111,6 +135,11 @@ if(isset($_POST['submit'])){
   </div>
 </section>
 
+<?php 
+    }else{
+      echo "<h1>Hello, " . $_SESSION['user']['email'] . "</h2>";
+  }
+    ?>
 		</div>
 	</main>
 
