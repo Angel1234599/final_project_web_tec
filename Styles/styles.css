@@ -2,3 +2,42 @@
   body {    
     background-color: #f8f9fb;
   }
+
+  .img{
+    margin-top: 10px;
+  }
+
+  .imageanddes{
+    
+    margin: 0 auto;
+    background-color: aqua;
+    height: 50%;
+    width: 96%;
+    
+}
+
+.row1images{
+  
+  margin-top: 10px;
+    
+  float: left;
+  position: relative;
+  width: 20%;
+  height: 20%;
+}
+ 
+
+.r1images{
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.video{
+  width: 96%;
+  height: 60vh;
+}
+
+iframe{
+  
+}

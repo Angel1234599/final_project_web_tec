@@ -35,9 +35,18 @@
 			//Containt main PHP Form
 			
 		?>
-		<!--Image file -->
+		<!-- Image file
 		
-		<img src="img/adoptme.png" alt="petimage" width="320" height="240">
+		<img src="img/adoptme.png" alt="petimage" width="320" height="240"> -->
+
+		<!-- video file -->
+
+		<div>
+		<video class="video" src="videos/1.mkv" onloadedmetadata="this.muted = true" playsinline  controls autoplay muted loop></video><br><br>
+
+    </div>
+
+
 
 
 		
