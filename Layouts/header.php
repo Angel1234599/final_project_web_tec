@@ -20,7 +20,7 @@
           <a class="nav-link" href="pets.php">Pets</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Search Pet</a>
+          <a class="nav-link" href="searchPet.php">Search Pet</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="history.php">History</a>
