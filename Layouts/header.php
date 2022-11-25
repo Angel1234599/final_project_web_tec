@@ -23,10 +23,10 @@
           <a class="nav-link" href="#">Search Pet</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">History Adoptions</a>
+          <a class="nav-link" href="history.php">History</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Acept Adoption</a>
+          <a class="nav-link" href="pending.php">Pending</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="login.php">Login</a>
