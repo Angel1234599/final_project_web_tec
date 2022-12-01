@@ -1,3 +1,5 @@
+
+
 <!-- As a heading -->
 <nav class="nav navbar navbar-nav navbar-light bg-light mx-auto">
   <div class="container-fluid text-center">
@@ -25,9 +27,13 @@
         <li class="nav-item active">
           <a class="nav-link" href="history.php">History</a>
         </li>
-        <li class="nav-item active">
+        
+          <li class="nav-item active">
           <a class="nav-link" href="pending.php">Pending</a>
         </li>
+                
+        
+    
         <li class="nav-item active">
           <a class="nav-link" href="login.php">Login</a>
         </li>

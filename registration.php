@@ -1,3 +1,34 @@
+<?php
+    session_start();    
+    $errorM = "";
+    
+    include('dbconnection.php');
+
+    if(isset($_POST['btnRegister'])){
+     
+        $name = $_POST['txtName'];
+        $email = $_POST['txtEmail'];
+        $password = $_POST['txtPassword'];
+        $address = $_POST['txtAddress'];
+        $phone_number = $_POST['txtPhoneNumber'];
+
+        
+        $query = "INSERT INTO 
+          user  
+          VALUES ('', '$email', '$password', '$name', '$phone_number', '$address')";
+
+        // echo $query;
+        $insert = mysqli_query($db,$query);
+       // $result = $db->query($query);
+
+        //print_r($result);
+    }
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -46,30 +77,38 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form>
+              <form method="post">
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="txtName" />
                   <label class="form-label" for="form3Example1cg">Your Name</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="txtEmail" />
                   <label class="form-label" for="form3Example3cg">Your Email</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="txtPassword"/>
                   <label class="form-label" for="form3Example4cg">Password</label>
                 </div>
 
+
+
+
+
                 <div class="form-outline mb-4">
-                  <input type="text" id="form3Example4cdg" class="form-control form-control-lg" />
+                
+                <textarea id="w3review" name="txtAddress" rows="4" cols="50" class="form-control form-control-lg">
+      
+      </textarea>
+                
                   <label class="form-label" for="form3Example4cdg">Enter Address</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="number" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <input type="number" id="form3Example4cdg" class="form-control form-control-lg"  name="txtPhoneNumber"/>
                   <label class="form-label" for="form3Example4cdg">Enter Phone Number</label>
                 </div>
 
@@ -81,8 +120,10 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <button type="button"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+
+                <input type="submit" name="btnRegister" value="Register" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                  <!-- <button type="button" name="btnRegister"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button> -->
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login.php"
