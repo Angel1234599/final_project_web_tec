@@ -21,7 +21,7 @@
             echo "welcome " . $row['idemail'];
             $_SESSION['isLoggedIn'] = true;
             $_SESSION['user'] = $row;
-            header("Location:  Index.php");
+            header("Location:  home.php");
 
         }else{
             $errorM = "The username/password is incorrect";

@@ -27,12 +27,21 @@
         <li class="nav-item active">
           <a class="nav-link" href="history.php">History</a>
         </li>
+        <?php
+          // session_start();
+          if (isset($_SESSION['user'])) {
+            $email = $_SESSION['user']['email'];
+            if ($email == 'admin@admin.com') {
+          
+        ?>
         
           <li class="nav-item active">
           <a class="nav-link" href="pending.php">Pending</a>
         </li>
-                
-        
+          <?php      
+      }
+    }
+        ?>
     
         <li class="nav-item active">
           <a class="nav-link" href="login.php">Login</a>

@@ -39,7 +39,8 @@
 	<main>	
 		<div class="container">
 		<?php 
-            echo '<h1>Successfully logged out!</h1>';
+            header("Location:  login.php");
+            //header('')
         ?>
 
 
