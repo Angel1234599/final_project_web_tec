@@ -61,6 +61,7 @@ session_start();
 						<th scope="col">Type</th>
 						<th scope="col">Name</th>
 						<th scope="col">Age</th>
+						<th scope="col">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -69,18 +70,27 @@ session_start();
 							<td>Dog</td>
 							<td>Otto</td>
 							<td>2 Years</td>
+							<td>								
+								<button type="button" class="btn btn-success">Adopt</button>								
+							</td>
 						</tr>
 						<tr>
 							<th scope="row">2</th>
 								<td>Cat</td>
 								<td>Tom</td>
 								<td>1 Month</td>
+								<td>
+									<button type="button" class="btn btn-success">Adopt</button>	
+								</td>
 							</tr>
 						<tr>
 							<th scope="row">3</th>
 							<td >Dog</td>
 							<td >Haku</td>
 							<td>5 Years</td>
+							<td>
+								<button type="button" class="btn btn-success">Adopt</button>	
+							</td>
 						</tr>
 					</tbody>
 				</table>

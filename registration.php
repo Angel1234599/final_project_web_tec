@@ -20,7 +20,7 @@
         // echo $query;
         $insert = mysqli_query($db,$query);
        // $result = $db->query($query);
-
+        header("Location: login.php");
         //print_r($result);
     }
 ?>
