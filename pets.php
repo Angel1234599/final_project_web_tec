@@ -58,13 +58,22 @@ session_start();
 					<img src="img/pet2img.jpg" alt="This is a dog image" class="r1images">
 					<p>Dog 2</p>
 					<p>Description : Very active</p>
+					
 
 				</div>
 
+				
 				<!-- <img src="img/pet2img.jpg" alt="petimage2" width="320" height="240"> -->
 
 
 			</div>
+
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
+
+			<button onclick="location.href='addpet.php'" type="button" class="btn btn-success">
+         Add pet</button>
+
 
 
 
