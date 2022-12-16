@@ -2,19 +2,32 @@
 session_start();
 
 include('dbconnection.php');
-// Select orders from db
-$query = "SELECT p.id as petId, p.name as petName, p.age as petAge, p.approved as petApproved, u.id as userId, u.name as userName, u.address as userAddress, u.email as userEmail, u.phone_number as userPhone\n"
+$query = "SELECT idhistoryadoption as historyId, date, p.idPet as petId, p.name as petName, p.age as petAge, status.namestatus as petStatus, type.nametype as petType, u.id as userId, u.name as userName, u.email as userEmail, u.phone_number as userPhone, u.address as userAddress\n"
 
-    . "FROM pet as p\n"
+    . "FROM history_adoption as h \n"
 
-    . "JOIN user as u \n"
+    . "JOIN pet as p \n"
 
-    . "ON u.id = p.id;";
+    . "ON p.idPet = h.idPet\n"
+
+    . "JOIN user as u\n"
+
+    . "ON u.id= h.iduser\n"
+
+    . "JOIN statuspet as status \n"
+
+    . "ON status.idStatus = h.idStatus\n"
+
+    . "JOIN pettype as type\n"
+
+    . "ON type.idTypePet = p.idTypePet\n"
+	. "WHERE status.idStatus = 3;";
+
 
 $result = $db->query($query);
 $pets = $result->fetch_all(MYSQLI_ASSOC);
 $db->close();
-print_r($pets);
+//print_r($pets);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -70,24 +83,37 @@ print_r($pets);
 				echo '</div>';
 
 				$tab_id = 1;
+				echo '<div class="tab-content p-3">';
 				foreach($pets as $row)
 				{
-					echo '<div class="tab-content p-3">
-				<div class="tab-pane '.($tab_id == 1?"active":"").'" id="a'.$tab_id.'" role="tabpanel">
-					<div class="row">
-						<div class="col-sm ">';
-						echo '	<p>Name: '.$row['petName'].'</p>';
-						echo '	<p>Age: '.$row['petAge'].'year(s)</p>';
-						echo '	<p>Person Name: '.$row['userName'].'</p>';
-						echo '	<p>Email: '.$row['userEmail'].'</p>';
-						echo '	<p>Address: '.$row['userAddress'].'</p>';
-						echo '	<p>Phone: '.$row['userPhone'].'</p>';
-					echo'</div>
-						<div class="col-sm ">
-							<img src="img/pet1img.jpg" alt="Card image cap">
-						</div>
-					</div>
-				</div>';
+					echo '<div class="tab-pane '.($tab_id == 1?"active":"").'" id="a'.$tab_id.'" role="tabpanel">
+						<div class="row">
+							<div class="col-sm ">';
+							echo '	<p>Adoption date: '.$row['date'].'</p>';
+							echo '	<p>Status: '.$row['petStatus'].'</p>';
+							echo '	<p>Name: '.$row['petName'].'</p>';
+							echo '	<p>Type: '.$row['petType'].'</p>';
+							echo '	<p>Age: '.$row['petAge'].' year(s)</p>';
+							echo '	<p>Owner name: '.$row['userName'].'</p>';
+							echo '	<p>Email: '.$row['userEmail'].'</p>';
+							echo '	<p>Address: '.$row['userAddress'].'</p>';
+							echo '	<p>Phone: '.$row['userPhone'].'</p>';
+						echo'</div>';
+						if ($row['petType'] == 'cat')
+						{
+							echo'<div class="col-sm ">
+									<img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Card image cap">
+								</div>';
+						}
+						else
+						{
+							echo'<div class="col-sm ">
+							<img src="https://cdn-icons-png.flaticon.com/512/2171/2171990.png" alt="Card image cap">
+						</div>';
+						}
+
+						echo '</div>';
+					echo '</div>';
 					$tab_id++;
 				}
 				echo '</div>';
