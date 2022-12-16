@@ -13,6 +13,9 @@
 
         echo $query;
 
+
+        
+
         $result = $db->query($query);
 
         $row = $result->fetch_assoc();
@@ -21,11 +24,21 @@
             echo "welcome " . $row['idemail'];
             $_SESSION['isLoggedIn'] = true;
             $_SESSION['user'] = $row;
+                    //to get user id to pass the value to pet form
+
+            $_SESSION['userid'] = ['user']["id"];
+            $_SESSION['username'] = ['user']["name"];
+
             header("Location:  home.php");
 
         }else{
             $errorM = "The username/password is incorrect";
         }
+
+
+     
+
+        
     }
 ?>
 

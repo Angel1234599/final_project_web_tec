@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 include('dbconnection.php');
 // Select orders from db
 $query = "SELECT p.id as petId, p.name as petName, p.age as petAge, p.approved as petApproved, u.id as userId, u.name as userName, u.address as userAddress, u.email as userEmail, u.phone_number as userPhone\n"
