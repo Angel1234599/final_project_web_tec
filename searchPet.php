@@ -1,25 +1,3 @@
-<?php
-	session_start();
-	//to check if user is loggedd in if not redirect them
-	//include('isLogin.php');
-
-	if(isset($_POST['adopt'])){
-		include('dbconnection.php');
-		$query = "update pet set idstatus = 2,idUser = " . $_SESSION['user']['id'] .  " where idpet = " .$_POST['adopt']. "";
-		$insert = mysqli_query($db,$query);
-		if ($insert) {
-			// Show  modal
-			echo 
-			'<div class="alert alert-danger alert-dismissible fade show" role="alert" id="deniedMsg">
-				Adopted!
-			</div>';
-		} else {
-			echo "Error: " . $query . "<br>" . $conn->error;
-		}
-
-	}
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -39,9 +17,29 @@
 
 	<!-- Latest compiled JavaScript -->
     
-	<script src="bootstrap/js/bootstrap.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.js"></script>    
+	<script src="bootstrap/js/bootbox.all.min.js"></script>   
     
+	<?php
+	session_start();
+	//to check if user is loggedd in if not redirect them
+	include('isLogin.php');
+
+	if(isset($_POST['adopt'])){
+		include('dbconnection.php');
+		$query = "update pet set idstatus = 2,idUser = " . $_SESSION['user']['id'] .  " where idpet = " .$_POST['adopt']. "";
+		$insert = mysqli_query($db,$query);
+		if ($insert) {
+			// Show  modal
+			echo '<script type="text/javascript">','bootbox.alert("Hello world!");', '</script>';
+		} else {
+			echo "Error: " . $query . "<br>" . $conn->error;
+		}
+
+	}
+
+?>
 
 </head>
 <body style="background-color: #051f44">
@@ -98,56 +96,13 @@
 
 				echo "</table>";
 			?>
-				<!--<table class="table table-striped">
-					<thead>
-						<tr>
-						<th scope="col">#</th>
-						<th scope="col">Type</th>
-						<th scope="col">Name</th>
-						<th scope="col">Age</th>
-						<th scope="col">Actions</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">1</th>
-							<td>Dog</td>
-							<td>Otto</td>
-							<td>2 Years</td>
-							<td>								
-								<button type="button" class="btn btn-success">Adopt</button>								
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-								<td>Cat</td>
-								<td>Tom</td>
-								<td>1 Month</td>
-								<td>
-									<button type="button" class="btn btn-success">Adopt</button>	
-								</td>
-							</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td >Dog</td>
-							<td >Haku</td>
-							<td>5 Years</td>
-							<td>
-								<button type="button" class="btn btn-success">Adopt</button>	
-							</td>
-						</tr>
-					</tbody>
-				</table>
--->
+				
 			</div>				
 		</form>
 
 		<div>		
 
     </div>
-
-
-
 
 		
 		</div>

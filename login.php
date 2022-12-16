@@ -62,6 +62,7 @@
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="bootstrap/js/bootbox.js"></script>
 
 	<!-- Latest compiled JavaScript -->
     
@@ -89,9 +90,9 @@
   <div class = "error" style="color: white;"><?php echo $errorM; ?></div>
 
   <br>
-<section class="h-100 gradient-form" style="background-color: #051f44;">
+<section class="" style="background-color: #051f44;">
   <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="row d-flex justify-content-center align-items-center">
       <div class="col-xl-10">
         <div class="card rounded-3 text-black">
           <div class="row g-0">
