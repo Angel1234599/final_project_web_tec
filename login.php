@@ -70,7 +70,7 @@
     
 
 </head>
-<body>
+<body style="background-color: #051f44">
 	<header>
 		<?php 
 			require_once('Layouts/header.php');
@@ -88,7 +88,8 @@
       ?>
   <div class = "error"><?php echo $errorM; ?></div>
 
-<section class="h-100 gradient-form" style="background-color: #eee;">
+  <br>
+<section class="h-100 gradient-form" style="background-color: #051f44;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-xl-10">
@@ -99,43 +100,43 @@
 
                 <div class="text-center">
                 
-                  <h4 class="mt-1 mb-5 pb-1">Save A Life. Adopt A Pet</h4>
+                  <h4 class="mt-1 mb-5 pb-1"><strong>Save A Life. Adopt A Pet</strong></h4>
                 </div>
 
                 <form method="post" action="">
-                  <p>Please login to your account</p>
+                  <p><strong>Please login to your account</strong></p>
 
                   <div class="form-outline mb-4">
                     <input type="email" id="idemail" class="form-control"   
                       placeholder="Enter email address"  name="idemail"  />
-                    <label class="form-label" for="idemail">Email</label>
+                    <label class="form-label" for="idemail"><strong>Email</strong></label>
                   </div>
 
                   <div class="form-outline mb-4">
                     <input type="password" id="idpass" class="form-control"
                     placeholder="Enter Password" name="idpass"/>
-                    <label class="form-label" for="idpass">Password</label>
+                    <label class="form-label" for="idpass"><strong>Password</strong></label>
              </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <input type = "submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Log In">
+                    <input type = "submit" class="btn btn-dark" name="submit" value="Log In">
                     <!-- <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
                       in</button> -->
-                    <a class="text-muted" href="#!">Forgot password?</a>
+                    
                   </div>
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Don't have an account?</p>
-                    <button type="button" class="btn btn-outline-danger"><a href="registration.php">Create new</a></button>
+                    <button type="button" class="btn btn-dark"><a href="registration.php">Create new</a></button>
                   </div>
 
                 </form>
 
               </div>
             </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4">We are more than just a NGO</h4>
+            <div class="col-lg-6 d-flex align-items-center" style="background-color: green">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4 align-items-center">
+                <h4 class="mb-4 ">We are more than just a NGO</h4>
                 <img src="Img/iconpet.png"
                     style="width: 200px;" 
                      alt="logo" >
@@ -150,16 +151,17 @@
 
 <?php 
     }else{
-      echo "<h1>Hello, " . $_SESSION['user']['email'] . "</h2>";
+      echo "<h1>Hello, " . $_SESSION['user']['email'] . "</h2>";  
   }
     ?>
 		</div>
 	</main>
 
-	<footer>
+	
+</body>
+<!-- <footer>
 		<?php 
 			include_once('Layouts/footer.php');
 		?>
 	</footer>
-</body>
-</html>
+</html> -->
