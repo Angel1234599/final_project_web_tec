@@ -161,22 +161,14 @@ if (isset($_POST['submit'])) {
 								// While loop must be terminated
 								?>
 
-							</select>
-						</div>
-						<div class="formbuilder-select form-group field-status">
-							<label for="status" class="formbuilder-select-label">Status</label>
-							<select class="form-control" name="status" id="status">
+				<div class="row1images">
+					<img src="img/pet2img.jpg" alt="This is a dog image" class="r1images">
+					<p>Dog 2</p>
+					<p>Description : Very active</p>
 
-								<?php
-								// use a while loop to fetch data
-								// from the $all_status variable
-								// and individually display as an option
-								while ($status = mysqli_fetch_array(
-									$all_status,
-									MYSQLI_ASSOC
-								)) :;
-								?>
-									<option value="<?php echo $status["idStatus"];
+				</div>
+
+				<!-- <img src="img/pet2img.jpg" alt="petimage2" width="320" height="240"> -->
 
 													?>"><?php echo $status["namestatus"]; ?>
 									</option>
@@ -198,11 +190,8 @@ if (isset($_POST['submit'])) {
 				</form>
 			</div>
 
-
-
-
-
-
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
 
 		</div>
 	</main>
