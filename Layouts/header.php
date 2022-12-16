@@ -31,6 +31,7 @@
           // session_start();
           if (isset($_SESSION['user'])) {
             $email = $_SESSION['user']['email'];
+            $name = $_SESSION['user']['name'];
             if ($email == 'admin@admin.com') {
           
         ?>
@@ -53,7 +54,18 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown ml-auto">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Welcome User 1
+                <!-- Welcome User 1 -->
+
+                <!-- to set username to heading -->
+                <?php
+         
+          if (isset($_SESSION['user'])) {
+            
+            echo $_SESSION['user']['name'];
+          }
+          else{
+            echo "Please Login";
+          }?>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="#">Log Out</a></li>                

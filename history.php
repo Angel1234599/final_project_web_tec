@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 include('dbconnection.php');
 $query = "SELECT idhistoryadoption as historyId, date, p.idPet as petId, p.name as petName, p.age as petAge, status.namestatus as petStatus, type.nametype as petType, u.id as userId, u.name as userName, u.email as userEmail, u.phone_number as userPhone, u.address as userAddress\n"
 

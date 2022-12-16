@@ -1,6 +1,7 @@
 <?php
     session_start();
     session_destroy();
+	$_SESSION['boolLogin'] = false;
 ?>
 
 <!DOCTYPE html>

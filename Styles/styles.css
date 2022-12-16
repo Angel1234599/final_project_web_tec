@@ -38,6 +38,27 @@
   height: 60vh;
 }
 
+.text-muted{
+  margin-top: 25px;
+}
+
+.formbuilder-button{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.btnsbt{
+  width: 25%;
+  margin-top: 10px;
+  border: 2px solid aqua;
+}
+.btnsbt:hover{
+  background-color: gray;
+  color: white;
+  width: 25%;
+  margin-top: 10px;
+}
+
 iframe{
   
 }

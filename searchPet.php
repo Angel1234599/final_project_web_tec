@@ -1,5 +1,10 @@
 <?php
 session_start();
+//to check if user is loggedd in if not redirect them
+include('isLogin.php');
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
