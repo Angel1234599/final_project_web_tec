@@ -26,6 +26,7 @@ CREATE TABLE `pet`(
     `idTypePet` int(11) NOT NULL,
     `name` varchar(100) NOT NULL,
     `age` int(11) NOT NULL,
+    `image` varchar(100) NOT NULL,
     `idStatus` int(11) NOT NULL,
     `iduser` int(11) NULL,
     CONSTRAINT FK_pet_petType FOREIGN KEY (`idTypePet`)
@@ -66,9 +67,9 @@ INSERT INTO `user` (`id`, `email`, `password`, `name`, `phone_number`, `address`
 INSERT INTO `user` (`id`, `email`, `password`, `name`, `phone_number`, `address`) VALUES
 (4, 'admin@admin.com', 'admin', 'Admin', '123456', 'adress');
 
-insert into pet values(0,1,'Haku',6,1,null);
-insert into pet values(0,1,'Simba',6,1,null);
-insert into pet values(0,2,'Polo',6,1,null);
+insert into pet values(0,1,'Haku',6,'',1,null);
+insert into pet values(0,1,'Simba',6,'',1,null);
+insert into pet values(0,2,'Polo',6,'',1,null);
 
 commit;
 

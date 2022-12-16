@@ -1,9 +1,23 @@
 <?php
-session_start();
-//to check if user is loggedd in if not redirect them
-include('isLogin.php');
+	session_start();
+	//to check if user is loggedd in if not redirect them
+	//include('isLogin.php');
 
+	if(isset($_POST['adopt'])){
+		include('dbconnection.php');
+		$query = "update pet set idstatus = 2,idUser = " . $_SESSION['user']['id'] .  " where idpet = " .$_POST['adopt']. "";
+		$insert = mysqli_query($db,$query);
+		if ($insert) {
+			// Show  modal
+			echo 
+			'<div class="alert alert-danger alert-dismissible fade show" role="alert" id="deniedMsg">
+				Adopted!
+			</div>';
+		} else {
+			echo "Error: " . $query . "<br>" . $conn->error;
+		}
 
+	}
 
 ?>
 <!DOCTYPE html>
@@ -39,11 +53,8 @@ include('isLogin.php');
 
 	<main>	
 		<div class="container" style="margin-top:20px">
-		<?php 				
-			//Containt main PHP Form
-			
-		?>
-		<form>			
+		
+		<form method="Post">						
 			<div class="form-group row">
 				<label for="inputPassword3" class="col-sm-1 col-form-label">Pet</label>
 				<div class="col-sm-9">
@@ -59,7 +70,34 @@ include('isLogin.php');
 				</div>
 			</div>					
 			<div style="margin-top:20px">
-				<table class="table table-striped">
+			<?php
+				include('dbconnection.php');
+				$query = "select PET.*,pettype.nametype from PET inner join pettype on pet.idTypePet = pettype.idTypePet where idstatus = 1";
+    			$result = mysqli_query($db,$query );
+
+				echo "<table class='table table-striped'>
+				<tr>
+					<th scope='col'>#</th>
+					<th scope='col'>Type Pet</th>
+					<th scope='col'>Name</th>
+					<th scope='col'>Age</th>
+					<th scope='col'>Actions</th>
+				</tr>";
+
+				while($row = mysqli_fetch_array($result))
+				{
+					echo "<tr>";
+						echo "<td>" . $row['idPet'] . "</td>";
+						echo "<td>" . $row['nametype'] . "</td>";
+						echo "<td>" . $row['name'] . "</td>";
+						echo "<td>" . $row['age'] . "</td>";				
+						echo "<td><button type='submit' name='adopt' class='btn btn-success' value=" . $row['idPet'] . ">Adopt</button></td>";
+					echo "</tr>";
+				}
+
+				echo "</table>";
+			?>
+				<!--<table class="table table-striped">
 					<thead>
 						<tr>
 						<th scope="col">#</th>
@@ -99,6 +137,7 @@ include('isLogin.php');
 						</tr>
 					</tbody>
 				</table>
+-->
 			</div>				
 		</form>
 
