@@ -43,7 +43,10 @@
       }
     }
         ?>
-    
+    <li class="nav-item active">
+          <a class="nav-link" href="downloads.php">Download</a>
+        </li>
+
         <li class="nav-item active">
           <a class="nav-link" href="login.php">Login</a>
         </li>
