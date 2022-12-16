@@ -12,5 +12,9 @@
       <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
       <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
     </ul>
+    <div class="col-md-4 d-flex align-items-center">
+      <a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="https://www.flaticon.com/free-icons/cat" title="cat icons">Cat icons created by Freepik - Flaticon</a>
+		  <a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="https://www.flaticon.com/free-icons/dog" title="dog icons">Dog icons created by AomAm - Flaticon</a>
+    </div>
   </footer>
 </div>
