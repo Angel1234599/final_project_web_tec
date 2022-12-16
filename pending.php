@@ -89,7 +89,7 @@ $db->close();
 
 </head>
 
-<body>
+<body style="background-color: #051f44">
 	<header>
 		<?php
 		require_once('Layouts/header.php');
@@ -150,11 +150,11 @@ $db->close();
 
 	</main>
 
-	<footer>
+	<!-- <footer>
 		<?php
 		include_once('Layouts/footer.php');
 		?>
-	</footer>
+	</footer> -->
 </body>
 
 </html>

@@ -60,7 +60,7 @@ $db->close();
 
 </head>
 
-<body>
+<body style="background-color: #051f44">
 	<header>
 		<?php
 		require_once('Layouts/header.php');
@@ -68,7 +68,7 @@ $db->close();
 	</header>
 
 	<main>
-		<div class="container">
+		<div class="container" style="color:white">
 			<?php
 
 			if (isset($pets)) {

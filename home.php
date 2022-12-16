@@ -27,7 +27,7 @@ session_start();
     
 
 </head>
-<body>
+<body style="background-color: #051f44">
 	<header>
 		<?php 
 			require_once('Layouts/header.php');

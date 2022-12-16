@@ -86,7 +86,7 @@
     <?php 
     if(!isset($_SESSION['isLoggedIn']) || $_SESSION['isLoggedIn'] == false){
       ?>
-  <div class = "error"><?php echo $errorM; ?></div>
+  <div class = "error" style="color: white;"><?php echo $errorM; ?></div>
 
   <br>
 <section class="h-100 gradient-form" style="background-color: #051f44;">
@@ -151,7 +151,9 @@
 
 <?php 
     }else{
-      echo "<h1>Hello, " . $_SESSION['user']['email'] . "</h2>";  
+      ?>
+      <div class="text-white px-3 py-4 p-md-5 mx-md-4 align-items-center"><?php echo "<h1>Hello, " . $_SESSION['user']['email'] . "</h2>";?> </div>
+      <?php  
   }
     ?>
 		</div>

@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
 
 </head>
 
-<body>
+<body style="background-color: #051f44">
 	<header>
 		<?php
 		require_once('Layouts/header.php');
@@ -116,7 +116,7 @@ if (isset($_POST['submit'])) {
 
 	<main>
 		<div class="container">
-			<?php
+				<?php
 			//Containt main PHP Form
 
 			?>
@@ -133,15 +133,15 @@ if (isset($_POST['submit'])) {
 
 					<div class="rendered-form">
 						<div class="formbuilder-text form-group field-name">
-							<label for="name" class="formbuilder-text-label">Name</label>
+							<label for="name" class="formbuilder-text-label" style="color: white">Name</label>
 							<input type="text" class="form-control" name="name" access="false" id="name" required placeholder="Enter Name" oninvalid="this.setCustomValidity('Enter Pet Name Here')" oninput="this.setCustomValidity('')">
 						</div>
 						<div class="formbuilder-text form-group field-text-1671151273647">
-							<label for="text-1671151273647" class="formbuilder-text-label">Age</label>
+							<label for="text-1671151273647" class="formbuilder-text-label" style="color: white">Age</label>
 							<input type="text" class="form-control" name="age" access="false" id="age" required placeholder="Enter Age" oninvalid="this.setCustomValidity('Enter Age Here')" oninput="this.setCustomValidity('')">
 						</div>
 						<div class="formbuilder-select form-group field-type">
-							<label for="type" class="formbuilder-select-label">Type</label>
+							<label for="type" class="formbuilder-select-label" style="color: white">Type</label>
 							<select class="form-control" name="type" id="type">
 								<?php
 								// use a while loop to fetch data
@@ -164,7 +164,7 @@ if (isset($_POST['submit'])) {
 							</select>
 						</div>
 						<div class="formbuilder-select form-group field-status">
-							<label for="status" class="formbuilder-select-label">Status</label>
+							<label for="status" class="formbuilder-select-label" style="color: white">Status</label>
 							<select class="form-control" name="status" id="status">
 
 								<?php
@@ -188,7 +188,7 @@ if (isset($_POST['submit'])) {
 						</div>
 						<!--Image file -->
 						<div class="formbuilder-file form-group field-uploadfile">
-							<label for="uploadfile" class="formbuilder-file-label">Choose an image to upload</label>
+							<label for="uploadfile" class="formbuilder-file-label" style="color: white">Choose an image to upload</label>
 							<input type="file" class="form-control" name="uploadfile" access="false" multiple="false" id="uploadfile" required oninvalid="this.setCustomValidity('Please Upload an image')" oninput="this.setCustomValidity('')">
 						</div>
 						<div class="formbuilder-button form-group field-upload">

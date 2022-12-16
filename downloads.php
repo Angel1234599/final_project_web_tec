@@ -69,14 +69,15 @@ if(!empty($_GET['file2'])){
 
     
     </header>
-    <body>
+    <body style="background-color: #051f44">
     <header>
 		<?php 
 			require_once('Layouts/header.php');
 		?>	
 	</header>
 
-        <main>
+        <main style="overflow:hidden">
+        <br>    
         <div class="carousel-item active">
       <div class="container">
         <div class="row">
@@ -86,13 +87,12 @@ if(!empty($_GET['file2'])){
                 src="img/dog1.jpg"
                 class="card-img-top"
                 alt="Waterfall"
-                width-"100"
+                width="100"
                 height="300"
               />
               <div class="card-body">
-                <h5 class="card-title">Download Image</h5>
                 
-                <a href="downloads.php?file=dog1.jpg" class="btn btn-primary">Button</a>
+                <a href="downloads.php?file=dog1.jpg" class="btn btn-primary">Download Image</a>
               </div>
             </div>
           </div>
@@ -106,13 +106,12 @@ if(!empty($_GET['file2'])){
                 src="img/dog2.jpg"
                 class="card-img-top"
                 alt="Waterfall"
-                width-"100"
+                width"100"
                 height="300"
               />
               <div class="card-body">
-                <h5 class="card-title">Download Image</h5>
                 
-                <a href="downloads.php?file=dog2.jpg" class="btn btn-primary">Button</a>
+                <a href="downloads.php?file=dog2.jpg" class="btn btn-primary">Download Image</a>
               </div>
             </div>
           </div>
@@ -130,9 +129,7 @@ if(!empty($_GET['file2'])){
                 height="300"
               />
               <div class="card-body">
-                <h5 class="card-title">Download Image</h5>
-                
-                <a href="downloads.php?file=cat1.jpg" class="btn btn-primary">Button</a>
+                        <a href="downloads.php?file=cat1.jpg" class="btn btn-primary" >Download Image</a>
               </div>
             </div>
           </div>

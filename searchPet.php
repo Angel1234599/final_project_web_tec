@@ -44,7 +44,7 @@
     
 
 </head>
-<body>
+<body style="background-color: #051f44">
 	<header>
 		<?php 
 			require_once('Layouts/header.php');
@@ -54,8 +54,9 @@
 	<main>	
 		<div class="container" style="margin-top:20px">
 		
-		<form method="Post">						
-			<div class="form-group row">
+		<form method="Post" style="background-color: white">	
+		<br>					
+			<div class="form-group row" style="margin-left:20px">
 				<label for="inputPassword3" class="col-sm-1 col-form-label">Pet</label>
 				<div class="col-sm-9">
 					<select id="inputState" class="select form-control">
@@ -69,7 +70,7 @@
 					<button type="submit" class="btn btn-primary">Search</button>
 				</div>
 			</div>					
-			<div style="margin-top:20px">
+			<div style="margin-top:20px;" style="margin-left:20px"">
 			<?php
 				include('dbconnection.php');
 				$query = "select PET.*,pettype.nametype from PET inner join pettype on pet.idTypePet = pettype.idTypePet where idstatus = 1";
