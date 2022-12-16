@@ -1,4 +1,4 @@
-<div class="container fixed-bottom">
+<!--<div class="container fixed-bottom">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
@@ -17,4 +17,4 @@
 		  <a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="https://www.flaticon.com/free-icons/dog" title="dog icons">Dog icons created by AomAm - Flaticon</a>
     </div>
   </footer>
-</div>
+</div> -->

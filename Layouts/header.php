@@ -56,7 +56,7 @@
       </ul>    
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown ml-auto">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
+            <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
                 <!-- Welcome User 1 -->
 
                 <!-- to set username to heading -->
@@ -70,9 +70,7 @@
             echo "Please Login";
           }?>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Log Out</a></li>                
-            </ul>
+            
             </li>
         </ul>  
     </div>
