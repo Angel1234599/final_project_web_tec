@@ -78,6 +78,12 @@ if (isset($_POST['submit'])) {
 
 		echo "<p>inserted successfully</p>";
 	} else echo "not able to insert";
+
+	if (move_uploaded_file($tempname, $folder)) {
+        echo "<h3>  Image uploaded successfully!</h3>";
+    } else {
+        echo "<h3>  Failed to upload image!</h3>";
+    }
 }
 
 ?>
@@ -147,6 +153,7 @@ if (isset($_POST['submit'])) {
 								// use a while loop to fetch data
 								// from the $all_type variable
 								// and individually display as an option
+								
 								while ($type = mysqli_fetch_array(
 									$all_type,
 									MYSQLI_ASSOC

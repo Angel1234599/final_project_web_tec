@@ -108,13 +108,15 @@
 
                   <div class="form-outline mb-4">
                     <input type="email" id="idemail" class="form-control"   
-                      placeholder="Enter email address"  name="idemail"  />
+                      placeholder="Enter email address"  name="idemail"  
+                      required  oninvalid="this.setCustomValidity('Enter Email Here')" oninput="this.setCustomValidity('')"/>
                     <label class="form-label" for="idemail"><strong>Email</strong></label>
                   </div>
 
                   <div class="form-outline mb-4">
                     <input type="password" id="idpass" class="form-control"
-                    placeholder="Enter Password" name="idpass"/>
+                    placeholder="Enter Password" name="idpass"
+                    required  oninvalid="this.setCustomValidity('Enter Password Here')" oninput="this.setCustomValidity('')"/>
                     <label class="form-label" for="idpass"><strong>Password</strong></label>
              </div>
 

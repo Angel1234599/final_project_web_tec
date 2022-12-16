@@ -81,17 +81,22 @@
               <form method="post">
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="txtName" />
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="txtName" placeholder="Enter your name"
+                  required  oninvalid="this.setCustomValidity('Enter Name Here')" oninput="this.setCustomValidity('')" >
                   <label class="form-label" for="form3Example1cg"><Strong>Your Name</strong></label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="txtEmail" />
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="txtEmail" 
+                  placeholder="Enter your email"
+                  required  oninvalid="this.setCustomValidity('Enter email Here')" oninput="this.setCustomValidity('')"/>
                   <label class="form-label" for="form3Example3cg"><strong>Your Email</strong></label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="txtPassword"/>
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="txtPassword"
+                  placeholder="Enter your password"
+                  required  oninvalid="this.setCustomValidity('Enter password Here')" oninput="this.setCustomValidity('')"/>
                   <label class="form-label" for="form3Example4cg"><strong>Password</strong></label>
                 </div>
 
@@ -101,7 +106,9 @@
 
                 <div class="form-outline mb-4">
                 
-                <textarea id="w3review" name="txtAddress" rows="4" cols="50" class="form-control form-control-lg">
+                <textarea id="w3review" name="txtAddress" rows="4" cols="50" class="form-control form-control-lg"
+                placeholder="Enter your address"
+                  required  oninvalid="this.setCustomValidity('Enter Address Here')" oninput="this.setCustomValidity('')">
       
       </textarea>
                 
@@ -109,7 +116,9 @@
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="number" id="form3Example4cdg" class="form-control form-control-lg"  name="txtPhoneNumber"/>
+                  <input type="number" id="form3Example4cdg" class="form-control form-control-lg"  name="txtPhoneNumber"
+                  placeholder="Enter your number"
+                  required  oninvalid="this.setCustomValidity('Enter phone number Here')" oninput="this.setCustomValidity('')"/>
                   <label class="form-label" for="form3Example4cdg"><strong>Enter Phone Number</strong></label>
                 </div>
 
